@@ -1,6 +1,11 @@
-function devolverTotal(precio)
+function devolverPrecio(precio)
 {
     return precio;
 }
 
-export default devolverTotal;
+function devolverCantidad(cantidad)
+{
+    return cantidad;
+}
+
+export {devolverPrecio,devolverCantidad};
