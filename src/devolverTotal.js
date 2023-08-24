@@ -12,4 +12,10 @@ function devolverTotal(precio,cantidad)
 {
     return precio*cantidad;
 }
-export {devolverPrecio,devolverCantidad,devolverTotal};
+
+function devolverEstado(estado)
+{
+    return estado;
+}
+
+export {devolverPrecio,devolverCantidad,devolverTotal,devolverEstado};
