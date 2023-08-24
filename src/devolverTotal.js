@@ -8,4 +8,8 @@ function devolverCantidad(cantidad)
     return cantidad;
 }
 
-export {devolverPrecio,devolverCantidad};
+function devolverTotal(precio,cantidad)
+{
+    return precio*cantidad;
+}
+export {devolverPrecio,devolverCantidad,devolverTotal};

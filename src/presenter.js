@@ -1,5 +1,6 @@
 import { devolverPrecio } from "./devolverTotal";
 import { devolverCantidad } from "./devolverTotal";
+import { devolverTotal } from "./devolverTotal";
 
 const price = document.querySelector("#precio-item");
 const cantidad = document.querySelector("#cantidad-item");
@@ -14,5 +15,6 @@ form.addEventListener("submit", (event) => {
 
   div.innerHTML = "<p>" + "Precio por ítem: " + devolverPrecio(firstPrice) + "</p>";
   div.innerHTML += "<p>" + "Cantidad de ítems: " + devolverCantidad(firstCantidad) + "</p>";
-
+  div.innerHTML += "<p>" + "Precio Total: " + devolverTotal(firstPrice,firstCantidad) + "</p>";
+  
 });
