@@ -11,6 +11,14 @@ function devolverCantidad(cantidad)
 function devolverTotal(precio,cantidad,estado)
 {
     let total=0;
+    if(estado=="UT")
+    {
+        total=(precio*cantidad)*1.665;
+    }
+    if(estado=="NV")
+    {
+        total=(precio*cantidad)*1.8;
+    }
     if(estado=="AL")
     {
         total=(precio*cantidad)*1.4;
@@ -33,10 +41,6 @@ function devolverEstado(estado)
 
 function devolverImpuesto(estado)
 {
-    if(estado=="UT")
-    {
-        return 6.65;
-    }
     if(estado=="NV")
     {
         return 8.00;
