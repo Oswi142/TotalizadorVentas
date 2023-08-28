@@ -34,6 +34,8 @@ describe("Devolver total", () => {
   it("deberia devolver el precio total con impuesto de TX", () => {
     expect(devolverTotal(300,3,"TX")).toEqual(1462.5);
   });
-  
+  it("deberia devolver el precio total con impuesto de AL", () => {
+    expect(devolverTotal(300,3,"AL")).toEqual(1260);
+  });
 });
 
