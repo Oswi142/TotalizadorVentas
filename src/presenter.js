@@ -19,8 +19,7 @@ form.addEventListener("submit", (event) => {
 
   div.innerHTML = "<p>" + "Precio por ítem: " + devolverPrecio(firstPrice) + "</p>";
   div.innerHTML += "<p>" + "Cantidad de ítems: " + devolverCantidad(firstCantidad) + "</p>";
-  div.innerHTML += "<p>" + "Código de estado: " + devolverEstado(firstEstado) + "</p>";
-  div.innerHTML += "<p>" + "Impuesto para: " + devolverEstado(firstEstado) +": " + devolverImpuesto(firstEstado) +"%"+"</p>";
+  div.innerHTML += "<p>" + "Impuesto para " + devolverEstado(firstEstado) +": " + devolverImpuesto(firstEstado) +"%"+"</p>";
   div.innerHTML += "<p>" + "Precio neto: (" + devolverPrecio(firstPrice)+"x $"+ devolverCantidad(firstCantidad) + ") : $" + devolverTotal(firstPrice,firstCantidad) +"</p>";
   
 });

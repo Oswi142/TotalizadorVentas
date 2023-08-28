@@ -8,15 +8,21 @@ function devolverCantidad(cantidad)
     return cantidad;
 }
 
-function devolverTotal(precio,cantidad)
+function devolverTotal(precio,cantidad,estado)
 {
-    return precio*cantidad;
+    let total=0;
+    if(estado=="CA")
+    {
+        total=(precio*cantidad)*1.825;
+    }
+    return total;
 }
 
 function devolverEstado(estado)
 {
     return estado;
 }
+
 function devolverImpuesto(estado)
 {
     if(estado=="UT")
@@ -33,7 +39,7 @@ function devolverImpuesto(estado)
     }
     if(estado=="AL")
     {
-        return 4;
+        return 4.00;
     }
     if(estado=="CA")
     {
