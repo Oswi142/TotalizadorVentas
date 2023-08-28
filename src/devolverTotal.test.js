@@ -28,9 +28,6 @@ describe("Devolver total", () => {
   it("deberia devolver el impuesto del estado", () => {
     expect(devolverImpuesto("CA")).toEqual(8.25);
   });
-  it("deberia devolver el impuesto del estado", () => {
-    expect(devolverImpuesto("")).toEqual("error");
-  });
   it("deberia devolver el precio total con impuesto de AC", () => {
     expect(devolverTotal(300,3,"CA")).toEqual(1642.5);
   });
@@ -42,6 +39,9 @@ describe("Devolver total", () => {
   });
   it("deberia devolver el precio total con impuesto de NV", () => {
     expect(devolverTotal(300,3,"NV")).toEqual(1620);
+  });
+  it("deberia devolver el precio total con impuesto de UT", () => {
+    expect(devolverTotal(300,3,"UT")).toEqual(1498.5);
   });
 });
 

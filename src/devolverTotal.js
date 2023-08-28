@@ -41,6 +41,10 @@ function devolverEstado(estado)
 
 function devolverImpuesto(estado)
 {
+    if(estado=="UT")
+    {
+        return 6.65;
+    }
     if(estado=="NV")
     {
         return 8.00;
