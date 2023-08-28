@@ -39,27 +39,20 @@ function devolverEstado(estado)
     return estado;
 }
 
-function devolverImpuesto(estado)
-{
-    if(estado=="UT")
-    {
-        return 6.65;
-    }
-    if(estado=="NV")
-    {
-        return 8.00;
-    }
-    if(estado=="TX")
-    {
-        return 6.25;
-    }
-    if(estado=="AL")
-    {
-        return 4.00;
-    }
-    if(estado=="CA")
-    {
-        return 8.25;
+function devolverImpuesto(estado) {
+    switch (estado) {
+        case "UT":
+            return 6.65;
+        case "NV":
+            return 8.00;
+        case "TX":
+            return 6.25;
+        case "AL":
+            return 4.00;
+        case "CA":
+            return 8.25;
+        default:
+            return 0;
     }
 }
 
