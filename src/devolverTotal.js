@@ -11,6 +11,10 @@ function devolverCantidad(cantidad)
 function devolverTotal(precio,cantidad,estado)
 {
     let total=0;
+    if(estado=="TX")
+    {
+        total=(precio*cantidad)*1.625;
+    }
     if(estado=="CA")
     {
         total=(precio*cantidad)*1.825;
