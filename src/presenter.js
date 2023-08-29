@@ -13,7 +13,7 @@ const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
+  div.innerHTML = "";
   const firstPrice = Number.parseInt(price.value);
   const firstCantidad = Number.parseInt(cantidad.value);
   const firstEstado = estado.value;
@@ -23,5 +23,4 @@ form.addEventListener("submit", (event) => {
   div.innerHTML += "<p>" + "Descuento(" + devolverDescuento(firstPrice,firstCantidad,firstEstado)+ "%) : " + desc +"</p>";
   div.innerHTML += "<p>" + "Impuesto para " + devolverEstado(firstEstado) +": " + devolverImpuesto(firstEstado) +"%"+"</p>";
   div.innerHTML += "<p>" + "Precio Total(descuento e impuesto): $" + devolverTotalDef(firstPrice,firstCantidad,firstEstado) +"</p>";
-  
 });
