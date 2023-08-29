@@ -60,27 +60,16 @@ function devolverTotalDef(precio,cantidad,estado)
 {
     let total=0;
     total=devolverTotal(precio,cantidad,estado)
-    {
-        if(total>=1000 && total<=2999)
-        {
-            total=total*0.97;
-        }
-        if(total>=3000 && total<=6999)
-        {
-            total=total*0.95;
-        }
-        if(total>=7000 && total<=9999)
-        {
-            total=total*0.93;
-        }
-        if(total>=10000 && total<=29999)
-        {
-            total=total*0.90;
-        }
-        if(total>= 30000)
-        {
-            total=total*0.85;
-        }
+    if (total >= 1000 && total <= 2999) {
+        total = total * 0.97;
+    } else if (total >= 3000 && total <= 6999) {
+        total = total * 0.95;
+    } else if (total >= 7000 && total <= 9999) {
+        total = total * 0.93;
+    } else if (total >= 10000 && total <= 29999) {
+        total = total * 0.90;
+    } else if (total >= 30000) {
+        total = total * 0.85;
     }
     return total;
 }
