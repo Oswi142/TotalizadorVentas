@@ -3,6 +3,7 @@ import { devolverTotal } from "./devolverTotal";
 import { devolverEstado } from "./devolverTotal";
 import { devolverPrecio } from "./devolverTotal";
 import { devolverImpuesto } from "./devolverTotal";
+import { devolverTotalDef } from "./devolverTotal";
 
 describe("Devolver total", () => {
   it("deberia devolver el total", () => {
@@ -36,6 +37,9 @@ describe("Devolver total", () => {
   });
   it("deberia devolver el precio total con impuesto de UT", () => {
     expect(devolverTotal(300,3,"UT")).toEqual(1498.5);
+  });
+  it("deberia devolver el precio total con impuesto y descuento", () => {
+    expect(devolverTotalDef(500,3,"CA")).toEqual(2655.375);
   });
 });
 

@@ -56,4 +56,17 @@ function devolverImpuesto(estado) {
     }
 }
 
-export {devolverPrecio,devolverCantidad,devolverTotal,devolverEstado,devolverImpuesto};
+function devolverTotalDef(precio,cantidad,estado)
+{
+    let total=0;
+    total=devolverTotal(precio,cantidad,estado)
+    {
+        if(total>=1000 && total<=2999)
+        {
+            total=total*0.97;
+        }
+    }
+    return total;
+}
+
+export {devolverPrecio,devolverCantidad,devolverTotal,devolverEstado,devolverImpuesto,devolverTotalDef};
