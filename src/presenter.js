@@ -20,7 +20,7 @@ form.addEventListener("submit", (event) => {
   let desc=devolverTotal(firstPrice,firstCantidad,firstEstado)-devolverTotalDef(firstPrice,firstCantidad,firstEstado);
   
   div.innerHTML += "<p>" + "Precio neto: (" + devolverPrecio(firstPrice)+" x $"+ devolverCantidad(firstCantidad) + ") : $" + devolverPrecioNeto(firstPrice,firstCantidad) +"</p>";
-  div.innerHTML += "<p>" + "Descuento(" + devolverDescuento(firstPrice,firstCantidad,firstEstado)+ "%) : " + desc +"</p>";
   div.innerHTML += "<p>" + "Impuesto para " + devolverEstado(firstEstado) +": " + devolverImpuesto(firstEstado) +"%"+"</p>";
+  div.innerHTML += "<p>" + "Descuento(" + devolverDescuento(firstPrice,firstCantidad,firstEstado)+ "%) : " + desc +"</p>";
   div.innerHTML += "<p>" + "Precio Total(descuento e impuesto): $" + devolverTotalDef(firstPrice,firstCantidad,firstEstado) +"</p>";
 });
