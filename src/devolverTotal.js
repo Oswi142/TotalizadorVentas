@@ -65,6 +65,10 @@ function devolverTotalDef(precio,cantidad,estado)
         {
             total=total*0.97;
         }
+        if(total>=3000 && total<=6999)
+        {
+            total=total*0.95;
+        }
     }
     return total;
 }
