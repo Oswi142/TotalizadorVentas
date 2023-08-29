@@ -45,7 +45,10 @@ describe("Devolver total", () => {
     expect(devolverTotalDef(500,7,"CA")).toEqual(6068.125);
   });
   it("deberia devolver el precio total con impuesto y descuento de 7000", () => {
-    expect(devolverTotalDef(1000,7,"CA")).toEqual(12775);
+    expect(devolverTotalDef(800,7,"CA")).toEqual(9198);
+  });
+  it("deberia devolver el precio total con impuesto y descuento de 10000", () => {
+    expect(devolverTotalDef(2500,5,"CA")).toEqual(20531.25);
   });
 });
 
