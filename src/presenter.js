@@ -1,8 +1,9 @@
-import { devolverPrecio } from "./devolverTotal";
+import { devolverDescuento, devolverPrecio, devolverTotal } from "./devolverTotal";
 import { devolverCantidad } from "./devolverTotal";
-import { devolverTotal } from "./devolverTotal";
 import { devolverEstado } from "./devolverTotal";
 import { devolverImpuesto } from "./devolverTotal";
+import { devolverPrecioNeto } from "./devolverTotal";
+import { devolverTotalDef } from "./devolverTotal";
 
 const price = document.querySelector("#precio-item");
 const cantidad = document.querySelector("#cantidad-item");
@@ -16,10 +17,11 @@ form.addEventListener("submit", (event) => {
   const firstPrice = Number.parseInt(price.value);
   const firstCantidad = Number.parseInt(cantidad.value);
   const firstEstado = estado.value;
-
-  div.innerHTML = "<p>" + "Precio por ítem: " + devolverPrecio(firstPrice) + "</p>";
-  div.innerHTML += "<p>" + "Cantidad de ítems: " + devolverCantidad(firstCantidad) + "</p>";
+  let desc=devolverTotal(firstPrice,firstCantidad,firstEstado)-devolverTotalDef(firstPrice,firstCantidad,firstEstado);
+  
+  div.innerHTML += "<p>" + "Precio neto: (" + devolverPrecio(firstPrice)+" x $"+ devolverCantidad(firstCantidad) + ") : $" + devolverPrecioNeto(firstPrice,firstCantidad) +"</p>";
+  div.innerHTML += "<p>" + "Descuento(" + devolverDescuento(firstPrice,firstCantidad,firstEstado)+ "%) : " + desc +"</p>";
   div.innerHTML += "<p>" + "Impuesto para " + devolverEstado(firstEstado) +": " + devolverImpuesto(firstEstado) +"%"+"</p>";
-  div.innerHTML += "<p>" + "Precio neto: (" + devolverPrecio(firstPrice)+"x $"+ devolverCantidad(firstCantidad) + ") : $" + devolverTotal(firstPrice,firstCantidad) +"</p>";
+  div.innerHTML += "<p>" + "Precio Total(descuento e impuesto): $" + devolverTotalDef(firstPrice,firstCantidad,firstEstado) +"</p>";
   
 });

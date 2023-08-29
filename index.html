@@ -1,23 +1,38 @@
-<html>
-  <body>
-    <h1>Totalizador</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Totalizador</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+  <div class="container">
+    <h1 class="text-center mb-4">Totalizador</h1>
     <form id="total-form">
-      <label for="precio-item">Precio por ítem:</label>
-      <input type="number" id="precio-item" />
-      <label for="cantidad-item">Cantidad de ítems:</label>
-      <input type="number" id="cantidad-item" />
-      <label for="estado">Estado:</label>
-      <select name="estados" id="estados">
-         <option value="UT">UT</option>
-         <option value="NV">NV</option>
-         <option value="TX">TX</option>
-         <option value="AL">AL</option>
-         <option value="CA">CA</option>
-      </select>
-      <input type="submit" value="Totalizar" id="total-button" />
+      <div class="mb-3">
+        <label for="precio-item" class="form-label">Precio por ítem:</label>
+        <input type="number" id="precio-item" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="cantidad-item" class="form-label">Cantidad de ítems:</label>
+        <input type="number" id="cantidad-item" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado:</label>
+        <select name="estados" id="estados" class="form-select">
+          <option value="UT">UT</option>
+          <option value="NV">NV</option>
+          <option value="TX">TX</option>
+          <option value="AL">AL</option>
+          <option value="CA">CA</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Totalizar</button>
     </form>
-    <div id="resultado-div"></div>
+    <div id="resultado-div" class="mt-4"></div>
+  </div>
 
-    <script type="module" src="./src/presenter.js"></script>
-  </body>
+  <script type="module" src="./src/presenter.js"></script> 
+</body>
 </html>
